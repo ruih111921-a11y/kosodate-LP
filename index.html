@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="発達の遅れがあるお子さんを育てるご家庭のための子育てサポートツール。通院・療育・受給者証・保育園連携をAIと仕組みでラクに。">
+  <title>発達障がい児子育ての便利ツール｜全部覚えなくていい毎日へ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <span class="header__logo-icon" aria-hidden="true">🌱</span>
+        <span class="header__logo-text">子育てサポート</span>
+      </a>
+      <nav class="header__nav" aria-label="メインナビゲーション">
+        <a href="#problems">お悩み</a>
+        <a href="#features">機能</a>
+        <a href="#story">ストーリー</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#cta-final" class="btn btn--primary btn--sm header__cta">無料で試す</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="モバイルナビゲーション">
+      <a href="#problems">お悩み</a>
+      <a href="#features">機能</a>
+      <a href="#story">ストーリー</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cta-final" class="btn btn--primary">無料で試す</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ① ファーストビュー -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">発達障がい児子育ての便利ツール</p>
+          <h1 class="hero__title">
+            <span class="hero__title-em">「私が全部覚えていないと<br>家庭が回らない。」</span>
+          </h1>
+          <p class="hero__subtitle">
+            そんな毎日を、<br>
+            <strong>AIと仕組み</strong>で少しラクに。
+          </p>
+          <p class="hero__desc">
+            発達の遅れがあるお子さんを育てるご家庭のための<br>
+            子育てサポートツール。
+          </p>
+
+          <!-- タグクラウド -->
+          <div class="hero__tags">
+            <span class="tag">通院</span>
+            <span class="tag">療育</span>
+            <span class="tag">受給者証</span>
+            <span class="tag">保育園との連携</span>
+            <span class="tag">家族の情報共有</span>
+          </div>
+
+          <p class="hero__benefit">
+            頭の中の「覚えておかなきゃ」を減らして、<br>
+            <strong>子どもと向き合う時間</strong>を増やします。
+          </p>
+
+          <div class="hero__cta">
+            <a href="#cta-final" class="btn btn--primary btn--lg">
+              <span>無料で試してみる</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#story" class="btn btn--ghost btn--lg">開発ストーリーを見る</a>
+          </div>
+        </div>
+
+        <!-- ビジュアル：アプリモック -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone-mock">
+            <div class="phone-mock__screen">
+              <div class="phone-mock__header">
+                <span>今日の予定</span>
+                <span class="phone-mock__badge">3件</span>
+              </div>
+              <div class="phone-mock__card phone-mock__card--1">
+                <div class="phone-mock__icon">🏥</div>
+                <div>
+                  <p class="phone-mock__label">通院</p>
+                  <p class="phone-mock__text">小児科 14:00</p>
+                </div>
+                <span class="phone-mock__status phone-mock__status--ok">記録済</span>
+              </div>
+              <div class="phone-mock__card phone-mock__card--2">
+                <div class="phone-mock__icon">📋</div>
+                <div>
+                  <p class="phone-mock__label">受給者証</p>
+                  <p class="phone-mock__text">更新まで 45日</p>
+                </div>
+                <span class="phone-mock__status phone-mock__status--warn">要確認</span>
+              </div>
+              <div class="phone-mock__card phone-mock__card--3">
+                <div class="phone-mock__icon">🎨</div>
+                <div>
+                  <p class="phone-mock__label">療育</p>
+                  <p class="phone-mock__text">面談メモ共有済</p>
+                </div>
+                <span class="phone-mock__status phone-mock__status--ok">共有済</span>
+              </div>
+              <div class="phone-mock__ai">
+                <span>✨</span> AIが今日の要点をまとめました
+              </div>
+            </div>
+          </div>
+          <div class="hero__float hero__float--1">忘れない</div>
+          <div class="hero__float hero__float--2">共有できる</div>
+          <div class="hero__float hero__float--3">ラクになる</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② お悩み -->
+    <section class="problems section" id="problems">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">こんなお悩みありませんか？</span>
+          <h2 class="section__title">毎日、頭の中が<br>いっぱいになっていませんか？</h2>
+        </div>
+
+        <div class="problems__grid">
+          <div class="problem-card">
+            <div class="problem-card__check">✓</div>
+            <p>受給者証の更新を忘れそうで<strong>不安</strong></p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card__check">✓</div>
+            <p>保育園、療育、病院、市役所…<br>連絡先や予定が<strong>バラバラ</strong></p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card__check">✓</div>
+            <p>夫は協力的だけど、結局<strong>管理役は自分</strong></p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card__check">✓</div>
+            <p>「聞いてない」「忘れてた」が<strong>起こる</strong></p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card__check">✓</div>
+            <p>常に何かを忘れている気がして<strong>気が休まらない</strong></p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card__check">✓</div>
+            <p>本当はもっと<strong>子どもと向き合いたい</strong></p>
+          </div>
+        </div>
+
+        <!-- 目指すこと -->
+        <div class="mission">
+          <div class="mission__icon">🎯</div>
+          <div class="mission__content">
+            <h3 class="mission__title">このツールが目指すこと</h3>
+            <p class="mission__lead">タスクを増やすことでは<strong>ありません</strong>。</p>
+            <blockquote class="mission__quote">
+              「全部自分が覚えていなければ<br>ならない状態」<br>
+              <span>から解放されること。</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ Before / After -->
+    <section class="transform section section--alt" id="transform">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">得られる未来</span>
+          <h2 class="section__title">毎日が、少し変わる</h2>
+        </div>
+
+        <div class="ba-comparison">
+          <div class="ba-card ba-card--before">
+            <div class="ba-card__label">Before</div>
+            <ul class="ba-card__list">
+              <li>
+                <span class="ba-card__icon ba-card__icon--bad">😰</span>
+                頭の中が常にいっぱい
+              </li>
+              <li>
+                <span class="ba-card__icon ba-card__icon--bad">😟</span>
+                予定を忘れないか不安
+              </li>
+              <li>
+                <span class="ba-card__icon ba-card__icon--bad">😔</span>
+                自分だけが管理役
+              </li>
+            </ul>
+          </div>
+
+          <div class="ba-arrow" aria-hidden="true">
+            <div class="ba-arrow__circle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="ba-card ba-card--after">
+            <div class="ba-card__label">After</div>
+            <ul class="ba-card__list">
+              <li>
+                <span class="ba-card__icon ba-card__icon--good">😌</span>
+                忘れる不安が減る
+              </li>
+              <li>
+                <span class="ba-card__icon ba-card__icon--good">👫</span>
+                夫婦で情報共有できる
+              </li>
+              <li>
+                <span class="ba-card__icon ba-card__icon--good">✅</span>
+                「次に何をするか」で悩まない
+              </li>
+              <li>
+                <span class="ba-card__icon ba-card__icon--good">💛</span>
+                子どもと向き合う余裕が少し増える
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 機能紹介 -->
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">機能紹介</span>
+          <h2 class="section__title">療育・通院・行政手続きを<br>まとめて管理</h2>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__visual feature-card__visual--1">
+              <div class="feature-card__mock">
+                <div class="mock-row"><span>🏥</span> 小児科 3/15</div>
+                <div class="mock-row"><span>📝</span> 発達検査の結果メモ</div>
+                <div class="mock-row mock-row--highlight"><span>📅</span> 次回 4/10 14:00</div>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <h3>通院記録</h3>
+              <p>受診内容や次回予約を記録</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__visual feature-card__visual--2">
+              <div class="feature-card__mock">
+                <div class="mock-cert">
+                  <span>📋 受給者証</span>
+                  <div class="mock-cert__bar"><div class="mock-cert__fill" style="width:65%"></div></div>
+                  <span class="mock-cert__days">更新まで 45日</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <h3>受給者証や手帳の期限管理</h3>
+              <p>更新忘れを防止</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__visual feature-card__visual--3">
+              <div class="feature-card__mock">
+                <div class="mock-share">
+                  <div class="mock-share__item"><span>🏫</span> 保育園面談メモ</div>
+                  <div class="mock-share__item"><span>🎨</span> 療育報告書</div>
+                  <div class="mock-share__avatars">
+                    <span>👩</span><span>👨</span><span class="mock-share__sync">同期済</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <h3>保育園・療育との情報共有</h3>
+              <p>面談内容や連絡事項を一元管理</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__visual feature-card__visual--4">
+              <div class="feature-card__mock">
+                <div class="mock-ai">
+                  <div class="mock-ai__header">✨ AI要約</div>
+                  <p>今月の療育では、コミュニケーションの進展が見られました。次回は...</p>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <h3>AIによる要約</h3>
+              <p>長い記録も簡単に振り返り</p>
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--wide">
+            <div class="feature-card__visual feature-card__visual--5">
+              <div class="feature-card__mock feature-card__mock--family">
+                <div class="family-visual">
+                  <div class="family-visual__person family-visual__person--active">
+                    <span>👩</span>
+                    <small>ママ</small>
+                  </div>
+                  <div class="family-visual__line"></div>
+                  <div class="family-visual__center">
+                    <span>📱</span>
+                    <small>同じ情報</small>
+                  </div>
+                  <div class="family-visual__line"></div>
+                  <div class="family-visual__person">
+                    <span>👨</span>
+                    <small>パパ</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <h3>家族共有</h3>
+              <p>夫婦で同じ情報を確認。「聞いてない」を減らします</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ 比較表 -->
+    <section class="compare section section--alt" id="compare">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">比較</span>
+          <h2 class="section__title">なぜ一般的なアプリでは<br>足りないの？</h2>
+        </div>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" class="compare-table__generic">一般的な<br>家族アプリ</th>
+                <th scope="col" class="compare-table__ours">本サービス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">家族予定の管理</th>
+                <td><span class="rating rating--ok">○</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+              <tr>
+                <th scope="row">通院管理</th>
+                <td><span class="rating rating--partial">△</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+              <tr>
+                <th scope="row">療育記録</th>
+                <td><span class="rating rating--no">×</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+              <tr>
+                <th scope="row">受給者証更新</th>
+                <td><span class="rating rating--no">×</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+              <tr>
+                <th scope="row">支援機関の情報管理</th>
+                <td><span class="rating rating--no">×</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+              <tr>
+                <th scope="row">AI要約</th>
+                <td><span class="rating rating--partial">△</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+              <tr>
+                <th scope="row">当事者目線</th>
+                <td><span class="rating rating--no">×</span></td>
+                <td><span class="rating rating--ok">○</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑥ 開発ストーリー -->
+    <section class="story section" id="story">
+      <div class="container">
+        <div class="story__inner">
+          <div class="story__visual">
+            <div class="story__illustration">
+              <div class="story__bubble story__bubble--1">通院</div>
+              <div class="story__bubble story__bubble--2">療育</div>
+              <div class="story__bubble story__bubble--3">保育園</div>
+              <div class="story__bubble story__bubble--4">行政手続き</div>
+              <div class="story__center">
+                <span>😮‍💨</span>
+                <p>頭がおかしく<br>なりそう</p>
+              </div>
+            </div>
+          </div>
+          <div class="story__content">
+            <span class="section__label">開発ストーリー</span>
+            <h2 class="section__title section__title--left">当事者だから<br>わかることがあります</h2>
+            <div class="story__text">
+              <p>このツールは、</p>
+              <p class="story__highlight">「発達の遅れがある子を育てながら働く親」</p>
+              <p>の困りごとから生まれました。</p>
+              <p>私自身、通院・療育・保育園・行政手続きの管理に追われ、<strong>「頭がおかしくなりそう」</strong>と思ったことが何度もあります。</p>
+              <p>だからこそ、</p>
+              <p class="story__wish">「もっと子どもと向き合う時間を増やしたい」</p>
+              <p>そんな思いで作っています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑦ FAQ -->
+    <section class="faq section section--alt" id="faq">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">よくある質問</span>
+          <h2 class="section__title">FAQ</h2>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>AIって難しくないですか？</summary>
+            <div class="faq__answer">
+              <p>専門知識は必要ありません。忙しい保護者でも使いやすいシンプルな設計を目指しています。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>個人情報は安全ですか？</summary>
+            <div class="faq__answer">
+              <p>データの取り扱いについてわかりやすく説明します。お子さんの大切な情報を守ることを最優先に設計しています。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Googleカレンダーではダメですか？</summary>
+            <div class="faq__answer">
+              <p>Googleカレンダーは便利ですが、療育、受給者証、支援機関など、発達支援特有の情報管理までは想定されていません。本ツールは発達支援に特化した設計です。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑧ 最終CTA -->
+    <section class="cta-final section" id="cta-final">
+      <div class="cta-final__bg">
+        <div class="cta-final__orb"></div>
+      </div>
+      <div class="container">
+        <div class="cta-final__inner">
+          <p class="cta-final__eyebrow">頑張ることを増やすためのツールではありません</p>
+          <h2 class="cta-final__title">
+            「頑張らなくても回る仕組み」<br>
+            を作るためのツールです
+          </h2>
+          <p class="cta-final__desc">
+            全部を一人で抱え込まなくてもいい。<br>
+            まずはできるところから、AIに任せてみませんか？
+          </p>
+          <div class="cta-final__buttons">
+            <a href="#" class="btn btn--white btn--lg">
+              <span>無料で試してみる</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#" class="btn btn--outline-white btn--lg">先行登録する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑨ 継続メッセージ -->
+    <section class="community section section--soft">
+      <div class="container">
+        <div class="community__inner">
+          <div class="community__icon">🤝</div>
+          <h2 class="community__title">一緒に育てていくサービスです</h2>
+          <p class="community__text">
+            このサービスは完成品ではありません。<br>
+            実際に使う保護者の声を聞きながら、少しずつ育てていきます。
+          </p>
+          <p class="community__text">
+            「こんな機能があったら助かる」<br>
+            そんな声も取り入れながら、
+          </p>
+          <p class="community__wish">
+            忙しい毎日を支える仕組みを、<br>
+            一緒につくっていけたらと思っています。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="header__logo-icon">🌱</span>
+        <span>発達障がい児子育ての便利ツール</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 子育てサポートツール</p>
+    </div>
+  </footer>
+
+  <!-- 固定CTA（モバイル） -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="#cta-final" class="btn btn--primary btn--full">無料で試してみる</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
