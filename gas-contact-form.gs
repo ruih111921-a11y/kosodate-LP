@@ -46,12 +46,12 @@ function doGet() {
 }
 
 function parseRequestBody_(e) {
-  if (e && e.postData && e.postData.contents) {
-    return JSON.parse(e.postData.contents);
+  if (e && e.parameter && Object.keys(e.parameter).length > 0) {
+    return e.parameter;
   }
 
-  if (e && e.parameter) {
-    return e.parameter;
+  if (e && e.postData && e.postData.contents) {
+    return JSON.parse(e.postData.contents);
   }
 
   throw new Error('送信データが空です。');
