@@ -9,7 +9,7 @@
   const contactForm = document.getElementById('contactForm');
   const contactSubmit = document.getElementById('contactSubmit');
   const contactMessage = document.getElementById('contactMessage');
-  const gasEndpoint = 'YOUR_GAS_WEB_APP_URL';
+  const gasEndpoint = 'https://script.google.com/macros/s/AKfycbxuKLC9J76qXCRXSJg4o-bOqfrqQpmeG_OCu2gVFmtF2d8m6eU-aHUS6HJNnhe9yUaf/exec';
 
   // ヘッダースクロール効果
   function handleScroll() {
@@ -139,25 +139,52 @@
       contactSubmit.querySelector('span').textContent = '送信中...';
       showContactMessage('', '');
 
+      const params = new URLSearchParams();
+
+      params.append('name', payload.name);
+      params.append('email', payload.email);
+      params.append('phone', payload.phone);
+      params.append('inquiryType', payload.inquiryType);
+      params.append('message', payload.message);
+      params.append('pageUrl', payload.pageUrl);
+      params.append('userAgent', payload.userAgent);
+      params.append('submittedAt', payload.submittedAt);
+
       fetch(gasEndpoint, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify(payload)
+      method: 'POST',
+      body: params
       })
-        .then(function () {
-          contactForm.reset();
-          showContactMessage('送信しました。確認後、メールにてご連絡します。', 'success');
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('送信失敗');
+        }
+
+      return response.json();
+      })
+      .then(function (result) {
+
+       if (!result.ok) {
+        throw new Error(result.message);
+       }
+
+        contactForm.reset();
+
+        showContactMessage(
+            '送信しました。確認後、メールにてご連絡します。',
+            'success'
+          );
         })
         .catch(function () {
-          showContactMessage('送信に失敗しました。時間をおいて再度お試しください。', 'error');
+        showContactMessage(
+           '送信に失敗しました。時間をおいて再度お試しください。',
+           'error'
+          );
         })
         .finally(function () {
           contactSubmit.disabled = false;
           contactSubmit.querySelector('span').textContent = '送信する';
         });
+        
     });
   }
 
