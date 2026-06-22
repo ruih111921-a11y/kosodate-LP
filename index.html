@@ -481,13 +481,43 @@
             全部を一人で抱え込まなくてもいい。<br>
             まずはできるところから、AIに任せてみませんか？
           </p>
-          <div class="cta-final__buttons">
-            <a href="#" class="btn btn--white btn--lg">
-              <span>無料で試してみる</span>
+          <form class="contact-form" id="contactForm">
+            <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="contact-form__grid">
+              <label class="contact-form__field">
+                <span>お名前</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="contact-form__field">
+                <span>メールアドレス</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+              <label class="contact-form__field">
+                <span>電話番号（任意）</span>
+                <input type="tel" name="phone" autocomplete="tel">
+              </label>
+              <label class="contact-form__field">
+                <span>お問い合わせ種別</span>
+                <select name="inquiryType" required>
+                  <option value="">選択してください</option>
+                  <option value="無料相談">無料相談</option>
+                  <option value="先行登録">先行登録</option>
+                  <option value="サービスについて">サービスについて</option>
+                  <option value="その他">その他</option>
+                </select>
+              </label>
+            </div>
+            <label class="contact-form__field contact-form__field--full">
+              <span>お問い合わせ内容</span>
+              <textarea name="message" rows="5" required placeholder="ご相談したいことや、気になっていることをご記入ください。"></textarea>
+            </label>
+            <p class="contact-form__notice">送信いただいた内容は確認後、メールにてご連絡します。</p>
+            <button type="submit" class="btn btn--white btn--lg contact-form__submit" id="contactSubmit">
+              <span>送信する</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#" class="btn btn--outline-white btn--lg">先行登録する</a>
-          </div>
+            </button>
+            <p class="contact-form__message" id="contactMessage" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>

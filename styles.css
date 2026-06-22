@@ -1339,6 +1339,105 @@ strong {
   justify-content: center;
 }
 
+.contact-form {
+  width: min(100%, 760px);
+  margin: var(--space-lg) auto 0;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  backdrop-filter: blur(12px);
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.contact-form__field--full {
+  margin-top: var(--space-sm);
+}
+
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--color-text);
+  font: inherit;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-form__field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  border-color: var(--color-warm);
+  box-shadow: 0 0 0 4px rgba(244, 162, 97, 0.22);
+}
+
+.contact-form__notice {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.contact-form__submit {
+  display: flex;
+  margin: var(--space-md) auto 0;
+}
+
+.contact-form__submit:disabled {
+  cursor: wait;
+  opacity: 0.74;
+  transform: none;
+}
+
+.contact-form__message {
+  min-height: 1.7em;
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-form__message--success {
+  color: #ffffff;
+}
+
+.contact-form__message--error {
+  color: #ffe8df;
+}
+
+.contact-form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 /* Community */
 .community__inner {
   text-align: center;
@@ -1448,6 +1547,10 @@ strong {
 
   .feature-card--wide .feature-card__visual {
     min-height: 120px;
+  }
+
+  .contact-form__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

@@ -6,6 +6,10 @@
   const mobileMenu = document.getElementById('mobileMenu');
   const stickyCta = document.getElementById('stickyCta');
   const hero = document.getElementById('hero');
+  const contactForm = document.getElementById('contactForm');
+  const contactSubmit = document.getElementById('contactSubmit');
+  const contactMessage = document.getElementById('contactMessage');
+  const gasEndpoint = 'YOUR_GAS_WEB_APP_URL';
 
   // ヘッダースクロール効果
   function handleScroll() {
@@ -68,7 +72,7 @@
 
   // スクロールアニメーション（Intersection Observer）
   const revealElements = document.querySelectorAll(
-    '.problem-card, .feature-card, .ba-card, .mission, .faq__item, .story__inner, .community__inner, .compare-table-wrap'
+    '.problem-card, .feature-card, .ba-card, .mission, .faq__item, .story__inner, .community__inner, .compare-table-wrap, .contact-form'
   );
 
   revealElements.forEach(function (el) {
@@ -98,6 +102,72 @@
     revealElements.forEach(function (el) {
       el.classList.add('visible');
     });
+  }
+
+  // Contact form submission to Google Apps Script.
+  if (contactForm && contactSubmit && contactMessage) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!gasEndpoint || gasEndpoint === 'YOUR_GAS_WEB_APP_URL') {
+        showContactMessage('送信先URLが未設定です。GASのウェブアプリURLを script.js に設定してください。', 'error');
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+      if (formData.get('website')) {
+        return;
+      }
+
+      const payload = {
+        name: String(formData.get('name') || '').trim(),
+        email: String(formData.get('email') || '').trim(),
+        phone: String(formData.get('phone') || '').trim(),
+        inquiryType: String(formData.get('inquiryType') || '').trim(),
+        message: String(formData.get('message') || '').trim(),
+        pageUrl: window.location.href,
+        userAgent: window.navigator.userAgent,
+        submittedAt: new Date().toISOString()
+      };
+
+      if (!payload.name || !payload.email || !payload.inquiryType || !payload.message) {
+        showContactMessage('必須項目を入力してください。', 'error');
+        return;
+      }
+
+      contactSubmit.disabled = true;
+      contactSubmit.querySelector('span').textContent = '送信中...';
+      showContactMessage('', '');
+
+      fetch(gasEndpoint, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function () {
+          contactForm.reset();
+          showContactMessage('送信しました。確認後、メールにてご連絡します。', 'success');
+        })
+        .catch(function () {
+          showContactMessage('送信に失敗しました。時間をおいて再度お試しください。', 'error');
+        })
+        .finally(function () {
+          contactSubmit.disabled = false;
+          contactSubmit.querySelector('span').textContent = '送信する';
+        });
+    });
+  }
+
+  function showContactMessage(message, type) {
+    contactMessage.textContent = message;
+    contactMessage.classList.remove('contact-form__message--success', 'contact-form__message--error');
+
+    if (type) {
+      contactMessage.classList.add('contact-form__message--' + type);
+    }
   }
 
   // FAQ：1つだけ開く
