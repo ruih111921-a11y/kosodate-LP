@@ -72,7 +72,7 @@
 
   // スクロールアニメーション（Intersection Observer）
   const revealElements = document.querySelectorAll(
-    '.problem-card, .feature-card, .ba-card, .mission, .faq__item, .story__inner, .community__inner, .compare-table-wrap, .contact-form'
+    '.problems__visual, .feature-card, .ba-card, .mission, .faq__item, .story__inner, .community__inner, .compare-table-wrap, .contact-form'
   );
 
   revealElements.forEach(function (el) {

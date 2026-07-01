@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="発達の遅れがあるお子さんを育てるご家庭のための子育てサポートツール。通院・療育・受給者証・保育園連携をAIと仕組みでラクに。">
-  <title>発達障がい児子育ての便利ツール｜全部覚えなくていい毎日へ</title>
+  <meta name="description" content="頭の余白は、心の余白。保育園・療育・通院・書類管理をひとつに。タスクの多い発達障がい児子育てに、yohakuがそっと伴走する子育てサポートツール。">
+  <title>頭の余白は、心の余白。｜発達障がい児子育てサポート</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260701-17">
 </head>
 <body>
   <!-- ヘッダー -->
   <header class="header" id="header">
     <div class="header__inner">
-      <a href="#" class="header__logo">
-        <span class="header__logo-icon" aria-hidden="true">🌱</span>
-        <span class="header__logo-text">子育てサポート</span>
+      <a href="#" class="header__logo" aria-label="yohaku トップへ">
+        <img src="asset/img/logo-header.png" alt="yohaku ママの心に、そっと余白を。" class="header__logo-img" width="718" height="526" decoding="async">
       </a>
       <nav class="header__nav" aria-label="メインナビゲーション">
         <a href="#problems">お悩み</a>
@@ -44,90 +43,42 @@
 
   <main>
     <!-- ① ファーストビュー -->
-    <section class="hero" id="hero">
-      <div class="hero__bg">
-        <div class="hero__orb hero__orb--1"></div>
-        <div class="hero__orb hero__orb--2"></div>
-        <div class="hero__orb hero__orb--3"></div>
+    <section class="hero hero--visual" id="hero">
+      <div class="hero__bg-image" aria-hidden="true">
+        <video
+          class="hero__bg-video"
+          src="asset/video/メインビジュアル.mp4"
+          poster="asset/img/mainvisual.png"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        ></video>
       </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content">
           <p class="hero__eyebrow">発達障がい児子育ての便利ツール</p>
-          <h1 class="hero__title">
-            <span class="hero__title-em">「私が全部覚えていないと<br>家庭が回らない。」</span>
+          <h1 class="hero__catch-main">
+            頭の余白は、<br>
+            <span class="hero__catch-accent">心の余白。</span>
           </h1>
-          <p class="hero__subtitle">
-            そんな毎日を、<br>
-            <strong>AIと仕組み</strong>で少しラクに。
-          </p>
-          <p class="hero__desc">
-            発達の遅れがあるお子さんを育てるご家庭のための<br>
-            子育てサポートツール。
-          </p>
-
-          <!-- タグクラウド -->
-          <div class="hero__tags">
-            <span class="tag">通院</span>
-            <span class="tag">療育</span>
-            <span class="tag">受給者証</span>
-            <span class="tag">保育園との連携</span>
-            <span class="tag">家族の情報共有</span>
+          <p class="hero__catch-voice">日々の「まとめなきゃ」「忘れないようにしなきゃ」を<strong class="yohaku">yohaku</strong>に任せて、<br>ママの負担を少しだけ軽く。</p>
+          <hr class="hero__divider" aria-hidden="true">
+          <div class="hero__catch-sub">
+            <p class="hero__catch-lead">保育園・療育・通院…大切な書類や予定を一括管理。</p>
+            <p>面談の内容をわかりやすくまとめて記録するところまで、ひとつに。</p>
+            <p>「次どうするんだっけ？」で悩まない。</p>
+            <p class="hero__catch-em">タスクの多い発達障がい児子育てに、<strong class="yohaku">yohaku</strong>がそっと伴走します。</p>
           </div>
-
-          <p class="hero__benefit">
-            頭の中の「覚えておかなきゃ」を減らして、<br>
-            <strong>子どもと向き合う時間</strong>を増やします。
-          </p>
-
           <div class="hero__cta">
             <a href="#cta-final" class="btn btn--primary btn--lg">
               <span>無料で試してみる</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <span class="btn__arrow" aria-hidden="true">&gt;</span>
             </a>
             <a href="#story" class="btn btn--ghost btn--lg">開発ストーリーを見る</a>
           </div>
-        </div>
-
-        <!-- ビジュアル：アプリモック -->
-        <div class="hero__visual" aria-hidden="true">
-          <div class="phone-mock">
-            <div class="phone-mock__screen">
-              <div class="phone-mock__header">
-                <span>今日の予定</span>
-                <span class="phone-mock__badge">3件</span>
-              </div>
-              <div class="phone-mock__card phone-mock__card--1">
-                <div class="phone-mock__icon">🏥</div>
-                <div>
-                  <p class="phone-mock__label">通院</p>
-                  <p class="phone-mock__text">小児科 14:00</p>
-                </div>
-                <span class="phone-mock__status phone-mock__status--ok">記録済</span>
-              </div>
-              <div class="phone-mock__card phone-mock__card--2">
-                <div class="phone-mock__icon">📋</div>
-                <div>
-                  <p class="phone-mock__label">受給者証</p>
-                  <p class="phone-mock__text">更新まで 45日</p>
-                </div>
-                <span class="phone-mock__status phone-mock__status--warn">要確認</span>
-              </div>
-              <div class="phone-mock__card phone-mock__card--3">
-                <div class="phone-mock__icon">🎨</div>
-                <div>
-                  <p class="phone-mock__label">療育</p>
-                  <p class="phone-mock__text">面談メモ共有済</p>
-                </div>
-                <span class="phone-mock__status phone-mock__status--ok">共有済</span>
-              </div>
-              <div class="phone-mock__ai">
-                <span>✨</span> AIが今日の要点をまとめました
-              </div>
-            </div>
-          </div>
-          <div class="hero__float hero__float--1">忘れない</div>
-          <div class="hero__float hero__float--2">共有できる</div>
-          <div class="hero__float hero__float--3">ラクになる</div>
         </div>
       </div>
     </section>
@@ -135,269 +86,80 @@
     <!-- ② お悩み -->
     <section class="problems section" id="problems">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label">こんなお悩みありませんか？</span>
-          <h2 class="section__title">毎日、頭の中が<br>いっぱいになっていませんか？</h2>
-        </div>
-
-        <div class="problems__grid">
-          <div class="problem-card">
-            <div class="problem-card__check">✓</div>
-            <p>受給者証の更新を忘れそうで<strong>不安</strong></p>
+        <figure class="problems__visual">
+          <div class="problems__visual-header">
+            <p class="problems__visual-eyebrow">毎日の小さな悩みが、積み重なっていませんか？</p>
+            <h2 class="problems__visual-title">毎日、頭の中が<br>いっぱいになっていませんか？</h2>
           </div>
-          <div class="problem-card">
-            <div class="problem-card__check">✓</div>
-            <p>保育園、療育、病院、市役所…<br>連絡先や予定が<strong>バラバラ</strong></p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-card__check">✓</div>
-            <p>夫は協力的だけど、結局<strong>管理役は自分</strong></p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-card__check">✓</div>
-            <p>「聞いてない」「忘れてた」が<strong>起こる</strong></p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-card__check">✓</div>
-            <p>常に何かを忘れている気がして<strong>気が休まらない</strong></p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-card__check">✓</div>
-            <p>本当はもっと<strong>子どもと向き合いたい</strong></p>
-          </div>
-        </div>
+          <img
+            src="asset/img/LP画像1.jpg"
+            alt="受給者証の更新の不安、連絡先や予定のバラバラ、管理役は自分、「聞いてない」「忘れてた」、気が休まらない、本当はもっと子どもと向き合いたい。"
+            width="1387"
+            height="730"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
 
         <!-- 目指すこと -->
-        <div class="mission">
-          <div class="mission__icon">🎯</div>
-          <div class="mission__content">
-            <h3 class="mission__title">このツールが目指すこと</h3>
-            <p class="mission__lead">タスクを増やすことでは<strong>ありません</strong>。</p>
-            <blockquote class="mission__quote">
-              「全部自分が覚えていなければ<br>ならない状態」<br>
-              <span>から解放されること。</span>
-            </blockquote>
-          </div>
-        </div>
+        <figure class="mission__visual">
+          <img
+            src="asset/img/LP画像2.png"
+            alt="このツールが目指すこと。タスクを増やすことではなく、「全部自分が覚えていなければならない状態」から解放されること。"
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
     <!-- ③ Before / After -->
     <section class="transform section section--alt" id="transform">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label">得られる未来</span>
-          <h2 class="section__title">毎日が、少し変わる</h2>
-        </div>
-
-        <div class="ba-comparison">
-          <div class="ba-card ba-card--before">
-            <div class="ba-card__label">Before</div>
-            <ul class="ba-card__list">
-              <li>
-                <span class="ba-card__icon ba-card__icon--bad">😰</span>
-                頭の中が常にいっぱい
-              </li>
-              <li>
-                <span class="ba-card__icon ba-card__icon--bad">😟</span>
-                予定を忘れないか不安
-              </li>
-              <li>
-                <span class="ba-card__icon ba-card__icon--bad">😔</span>
-                自分だけが管理役
-              </li>
-            </ul>
-          </div>
-
-          <div class="ba-arrow" aria-hidden="true">
-            <div class="ba-arrow__circle">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <div class="ba-card ba-card--after">
-            <div class="ba-card__label">After</div>
-            <ul class="ba-card__list">
-              <li>
-                <span class="ba-card__icon ba-card__icon--good">😌</span>
-                忘れる不安が減る
-              </li>
-              <li>
-                <span class="ba-card__icon ba-card__icon--good">👫</span>
-                夫婦で情報共有できる
-              </li>
-              <li>
-                <span class="ba-card__icon ba-card__icon--good">✅</span>
-                「次に何をするか」で悩まない
-              </li>
-              <li>
-                <span class="ba-card__icon ba-card__icon--good">💛</span>
-                子どもと向き合う余裕が少し増える
-              </li>
-            </ul>
-          </div>
-        </div>
+        <figure class="transform__visual">
+          <img
+            src="asset/img/LP画像3.png"
+            alt="得られる未来、毎日が少し変わる。Before：頭の中が常にいっぱい、予定を忘れないか不安、自分だけが管理役。After：忘れる不安が減る、夫婦で情報共有できる、「次に何をするか」で悩まない、子どもと向き合う余裕が少し増える。"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
     <!-- ④ 機能紹介 -->
     <section class="features section" id="features">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label">機能紹介</span>
-          <h2 class="section__title">療育・通院・行政手続きを<br>まとめて管理</h2>
-        </div>
-
-        <div class="features__grid">
-          <article class="feature-card">
-            <div class="feature-card__visual feature-card__visual--1">
-              <div class="feature-card__mock">
-                <div class="mock-row"><span>🏥</span> 小児科 3/15</div>
-                <div class="mock-row"><span>📝</span> 発達検査の結果メモ</div>
-                <div class="mock-row mock-row--highlight"><span>📅</span> 次回 4/10 14:00</div>
-              </div>
-            </div>
-            <div class="feature-card__body">
-              <h3>通院記録</h3>
-              <p>受診内容や次回予約を記録</p>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__visual feature-card__visual--2">
-              <div class="feature-card__mock">
-                <div class="mock-cert">
-                  <span>📋 受給者証</span>
-                  <div class="mock-cert__bar"><div class="mock-cert__fill" style="width:65%"></div></div>
-                  <span class="mock-cert__days">更新まで 45日</span>
-                </div>
-              </div>
-            </div>
-            <div class="feature-card__body">
-              <h3>受給者証や手帳の期限管理</h3>
-              <p>更新忘れを防止</p>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__visual feature-card__visual--3">
-              <div class="feature-card__mock">
-                <div class="mock-share">
-                  <div class="mock-share__item"><span>🏫</span> 保育園面談メモ</div>
-                  <div class="mock-share__item"><span>🎨</span> 療育報告書</div>
-                  <div class="mock-share__avatars">
-                    <span>👩</span><span>👨</span><span class="mock-share__sync">同期済</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-card__body">
-              <h3>保育園・療育との情報共有</h3>
-              <p>面談内容や連絡事項を一元管理</p>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__visual feature-card__visual--4">
-              <div class="feature-card__mock">
-                <div class="mock-ai">
-                  <div class="mock-ai__header">✨ AI要約</div>
-                  <p>今月の療育では、コミュニケーションの進展が見られました。次回は...</p>
-                </div>
-              </div>
-            </div>
-            <div class="feature-card__body">
-              <h3>AIによる要約</h3>
-              <p>長い記録も簡単に振り返り</p>
-            </div>
-          </article>
-
-          <article class="feature-card feature-card--wide">
-            <div class="feature-card__visual feature-card__visual--5">
-              <div class="feature-card__mock feature-card__mock--family">
-                <div class="family-visual">
-                  <div class="family-visual__person family-visual__person--active">
-                    <span>👩</span>
-                    <small>ママ</small>
-                  </div>
-                  <div class="family-visual__line"></div>
-                  <div class="family-visual__center">
-                    <span>📱</span>
-                    <small>同じ情報</small>
-                  </div>
-                  <div class="family-visual__line"></div>
-                  <div class="family-visual__person">
-                    <span>👨</span>
-                    <small>パパ</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-card__body">
-              <h3>家族共有</h3>
-              <p>夫婦で同じ情報を確認。「聞いてない」を減らします</p>
-            </div>
-          </article>
-        </div>
+        <figure class="features__visual">
+          <img
+            src="asset/img/LP画像4.png"
+            alt="機能紹介。療育・通院・行政手続きをまとめて管理。通院記録、受給者証や手帳の期限管理、保育園・療育との情報共有、yohakuによる要約、家族共有。"
+            width="1402"
+            height="1122"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
     <!-- ⑤ 比較表 -->
     <section class="compare section section--alt" id="compare">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label">比較</span>
-          <h2 class="section__title">なぜ一般的なアプリでは<br>足りないの？</h2>
-        </div>
-
-        <div class="compare-table-wrap">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col" class="compare-table__generic">一般的な<br>家族アプリ</th>
-                <th scope="col" class="compare-table__ours">本サービス</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">家族予定の管理</th>
-                <td><span class="rating rating--ok">○</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-              <tr>
-                <th scope="row">通院管理</th>
-                <td><span class="rating rating--partial">△</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-              <tr>
-                <th scope="row">療育記録</th>
-                <td><span class="rating rating--no">×</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-              <tr>
-                <th scope="row">受給者証更新</th>
-                <td><span class="rating rating--no">×</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-              <tr>
-                <th scope="row">支援機関の情報管理</th>
-                <td><span class="rating rating--no">×</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-              <tr>
-                <th scope="row">AI要約</th>
-                <td><span class="rating rating--partial">△</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-              <tr>
-                <th scope="row">当事者目線</th>
-                <td><span class="rating rating--no">×</span></td>
-                <td><span class="rating rating--ok">○</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <figure class="compare__visual">
+          <img
+            src="asset/img/LP画像5.png"
+            alt="比較。なぜ一般的なアプリでは足りないの？家族予定の管理、通院管理、療育記録、受給者証更新、支援機関の情報管理、yohaku要約、当事者目線について、一般的な家族アプリと本サービスを比較。"
+            width="1402"
+            height="1122"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
@@ -412,8 +174,15 @@
               <div class="story__bubble story__bubble--3">保育園</div>
               <div class="story__bubble story__bubble--4">行政手続き</div>
               <div class="story__center">
-                <span>😮‍💨</span>
-                <p>頭がおかしく<br>なりそう</p>
+                <img
+                  src="asset/img/LP画像6.png"
+                  alt="頭がおかしくなりそう"
+                  class="story__center-img"
+                  width="1254"
+                  height="1254"
+                  loading="lazy"
+                  decoding="async"
+                >
               </div>
             </div>
           </div>
@@ -423,11 +192,11 @@
             <div class="story__text">
               <p>このツールは、</p>
               <p class="story__highlight">「発達の遅れがある子を育てながら働く親」</p>
-              <p>の困りごとから生まれました。</p>
-              <p>私自身、通院・療育・保育園・行政手続きの管理に追われ、<strong>「頭がおかしくなりそう」</strong>と思ったことが何度もあります。</p>
+              <p>の心の声から生まれました。</p>
+              <p>私自身、通院・療育・保育園・行政手続きの管理に追われ、<br><strong>「頭がおかしくなりそう」</strong>と思ったことが何度もあります。</p>
               <p>だからこそ、</p>
-              <p class="story__wish">「もっと子どもと向き合う時間を増やしたい」</p>
-              <p>そんな思いで作っています。</p>
+              <p class="story__wish">「少しでも良いから日々の時間に余白を作りたい」</p>
+              <p>そんな思いから作りました。</p>
             </div>
           </div>
         </div>
@@ -444,7 +213,7 @@
 
         <div class="faq__list">
           <details class="faq__item">
-            <summary>AIって難しくないですか？</summary>
+            <summary>使い方は難しくないですか？</summary>
             <div class="faq__answer">
               <p>専門知識は必要ありません。忙しい保護者でも使いやすいシンプルな設計を目指しています。</p>
             </div>
@@ -479,7 +248,7 @@
           </h2>
           <p class="cta-final__desc">
             全部を一人で抱え込まなくてもいい。<br>
-            まずはできるところから、AIに任せてみませんか？
+            まずはできるところから、<strong class="yohaku">yohaku</strong>に任せてみませんか？
           </p>
           <form class="contact-form" id="contactForm">
             <input type="text" name="website" class="contact-form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -549,8 +318,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="header__logo-icon">🌱</span>
-        <span>発達障がい児子育ての便利ツール</span>
+        <span>CHILD CARE SUPPORT</span>
       </div>
       <p class="footer__copy">&copy; 2026 子育てサポートツール</p>
     </div>
