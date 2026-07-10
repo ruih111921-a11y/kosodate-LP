@@ -1779,29 +1779,12 @@ strong {
   }
 
   .problems__visual-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--space-md);
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin-left: calc(-1 * var(--content-padding-x));
-    margin-right: calc(-1 * var(--content-padding-x));
-    padding-left: var(--content-padding-x);
-    padding-right: var(--content-padding-x);
-    scroll-padding-inline: var(--content-padding-x);
-  }
-
-  .problems__visual-grid::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 
   .problems__panel {
-    flex: 0 0 min(88vw, 22rem);
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
     align-items: stretch;
   }
 
