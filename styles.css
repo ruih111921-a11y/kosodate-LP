@@ -721,7 +721,7 @@ strong {
   margin-right: auto;
 }
 
-.problems__visual img,
+.problems__visual img:not(.problems__panel-icon),
 .mission__visual img,
 .transform__visual img,
 .features__visual img,
@@ -763,6 +763,47 @@ strong {
   line-height: 1.75;
   letter-spacing: 0.1em;
   color: var(--color-text);
+}
+
+.problems__visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(var(--space-sm), 2vw, var(--space-md));
+}
+
+.problems__panel {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.problems__panel-caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-family: var(--font-family);
+  font-size: clamp(0.8125rem, 2vw, 0.9375rem);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.problems__panel-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+.problems__panel-photo {
+  display: block;
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .problems__grid {
@@ -1567,22 +1608,39 @@ strong {
   letter-spacing: 0.1em;
 }
 
-.community__wish {
+.community__text {
   font-family: var(--font-serif);
   font-size: var(--font-size-base);
   font-weight: 500;
-  color: var(--color-primary-dark);
-  margin-top: var(--space-md);
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.community__text {
-  font-size: var(--font-size-base);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   margin-bottom: var(--space-sm);
   line-height: 2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
+}
+
+.community__text .yohaku {
+  font-family: inherit;
+}
+
+.community__group {
+  margin-top: var(--space-lg);
+}
+
+.community__group .community__text {
+  margin-bottom: var(--space-xs);
+}
+
+.community__group .community__text:last-child {
+  margin-bottom: 0;
+}
+
+.community__name {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-top: var(--space-lg);
+  letter-spacing: 0.12em;
 }
 
 /* Footer */
